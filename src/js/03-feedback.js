@@ -14,16 +14,16 @@ function onFormSubmit(e) {
   e.preventDefault();
   localStorage.removeItem(FORM_STORAGE_KEY);
   const formData = {
-    email: email.value.trim(),
-    message: message.value.trim(),
+    email: email.value,
+    message: message.value,
   };
   console.log(formData);
   e.currentTarget.reset();
 }
 function onFormInput(e) {
   const formData = {
-    email: email.value.trim(),
-    message: message.value.trim(),
+    email: email.value,
+    message: message.value,
   };
   const textInput = JSON.stringify(formData);
 
@@ -41,3 +41,4 @@ function recoverMessageFromStorage() {
     message.value = '';
   }
 }
+console.log('hi');
