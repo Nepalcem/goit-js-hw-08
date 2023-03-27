@@ -41,4 +41,3 @@ function recoverMessageFromStorage() {
     message.value = '';
   }
 }
-console.log('hi');
