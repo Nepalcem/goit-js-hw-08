@@ -12,6 +12,10 @@ form.addEventListener('input', throttle(onFormInput, 500));
 
 function onFormSubmit(e) {
   e.preventDefault();
+  if (email.value === '' || message.value === '') {
+    alert('Please insert data to all fields!');
+    return;
+  }
   localStorage.removeItem(FORM_STORAGE_KEY);
   const formData = {
     email: email.value.trim(),
