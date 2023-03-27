@@ -12,7 +12,7 @@ form.addEventListener('input', throttle(onFormInput, 500));
 
 function onFormSubmit(e) {
   e.preventDefault();
-  if (email.value === '' || message.value === '') {
+  if (email.value.trim() === '' || message.value.trim() === '') {
     alert('Please insert data to all fields!');
     return;
   }
